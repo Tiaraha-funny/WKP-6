@@ -1,0 +1,56 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+li {
+    list-style: none;
+}
+.order__lists--items {
+    display: contents;
+}
+.flex {
+    width: 300px;
+    border: 1px solid;
+    margin-left: 1rem;
+    background-color: silver;
+}
+.hungryS {
+    display: flex;
+    flex-direction: row;
+}
+
+/* For the modal */
+#submit,.close {
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-left: 20rem;
+    margin-top: 1rem;
+}
+.outer__modal {
+    display: grid;
+    place-items: center center;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    pointer-events: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.outer__modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.inner__modal {
+    background-color: white;
+    min-height: 200px;
+    min-width: 200px;
+    padding: 20px;
+}

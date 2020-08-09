@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>WKP6</title>
-	</head>
-	<body>
-		<script src="script.js"></script>
-	</body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>WKP6</title>
+</head>
+
+<body>
+  <header>
+    <h1>Hungry Students Restaurant</h1>
+  </header>
+  <div class="hungryS">
+    <div class="flex">
+      <div>
+        <p class="food__list">
+        <h2 class="food__list--title">Food List</h2>
+        </p>
+        <div class="filter">
+          <label for="food">Filter by:</label>
+          <input class="spicy" type="checkbox" name="food" id="food">Spicy
+          <input class="vegetarian" type="checkbox" name="food" id="food">Vegetarian
+          <div class="container"></div>
+        </div>
+      </div>
+    </div>
+    <div class="orderAdded"></div>
+  </div>
+  <div class="outer__modal">
+    <div class="inner__modal"></div>
+  </div>
+  <button id="submit">Confirm Order</button>
+  <script src="script.js"></script>
+</body>
+
 </html>
