@@ -128,19 +128,27 @@ const addBtn = document.querySelectorAll('.submit');
 const handleAddOrderLists = e => {
   console.log('sumbmit');
   if (e.target.matches('button.submit')) {
-      e.preventDefault();
-      const orderFoodsAddedHTML = `
-      <h2>Your Order</h2>
+    e.preventDefault();
+    const orderFoodsAddedHTML = foods.map(order => `
       <ul class="order__lists">
         <li class="order__lists--items" id="">
-          <div>Ravitoto</div>
+          <div>${order.title}</div>
           <div>* 2</div>
-          <div>5000 Ariary</div>
+          <div>${order.price}</div>
         </li>
-      </ul>
-    `
+      </ul>`).join(" ");
     orderWhichAddedBtn.insertAdjacentHTML("beforeend", orderFoodsAddedHTML);
     orderWhichAddedBtn.classList.add('flex');
+
+    const totalPriceOfTheOrderFoods = foods.reduce(total, order => {
+      `<div>
+          <label>Total :</label>
+          <button>${total.price + order.price}</button>
+        </div>
+      `
+      orderWhichAddedBtn.insertAdjacentHTML("beforeend", totalPriceOfTheOrderFoods);
+    });
+
   }
 }
 
